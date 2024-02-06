@@ -107,6 +107,10 @@ $purple: hsl(277, 87%, 94%);
     border: 2px solid var($purple);
 }
 
+svg {
+  fill: $primary;
+}
+
 // all custom changes must be made above the bootstrap import
 
 // import bootstrap

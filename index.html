@@ -31,9 +31,14 @@
                 <!-- sun -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#626C7F" d="M12 1.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 1 1-1.5 0v-1.5A.75.75 0 0 1 12 1.5Zm0 15a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0-1.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm9.75-2.25a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 1 0 0 1.5h1.5ZM12 19.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 1 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Zm-8.25-6.75a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 1 0 0 1.5h1.5Zm.969-8.031a.75.75 0 0 1 1.062 0l1.5 1.5a.751.751 0 0 1-1.062 1.062l-1.5-1.5a.75.75 0 0 1 0-1.062Zm1.062 14.562a.75.75 0 1 1-1.062-1.06l1.5-1.5a.75.75 0 1 1 1.062 1.06l-1.5 1.5Zm13.5-14.562a.75.75 0 0 0-1.062 0l-1.5 1.5a.751.751 0 0 0 1.062 1.062l1.5-1.5a.75.75 0 0 0 0-1.062Zm-1.062 14.562a.75.75 0 0 0 1.062-1.06l-1.5-1.5a.75.75 0 0 0-1.062 1.06l1.5 1.5Z"/></svg>
 
-                <!-- toggle -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                <!-- night mode toggle -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="svg-toggle-night" fill = "hsl(277, 91%, 56%)" class="bi bi-toggle-on d-none" viewBox="0 0 16 16">
                     <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8"/>
+                  </svg>
+
+                  <!-- day mode toggle -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="svg-toggle-day" fill = "hsl(277, 91%, 56%)" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                    <path d=" M 5 3 a 5 5 0 0 0 0 10 h 6 a 5 5 0 0 0 0 -10 z m -1 9 a 4 4 0 1 1 2 -8 a 4 4 0 0 1 -2 8"/>
                   </svg>
 
             <!-- <button class="buttonMode mx-lg-3">mode</button> -->
@@ -47,13 +52,16 @@
         <div class="main-content">
             <div class="row">
                 <header class="col-12 col-md-6">
+
+                    <!-- questions -->
                     <div class="question-header">
                         <h1 class="heading-L-regular blue-900">Welcome to the</h1>
                         <h1 class="heading-L-bold blue-900">Frontend Quiz!</h1>
                         <p class="body-S blue-700 gap-600">Pick a subject to get started</p>
                     </div>
 
-                    <div class="status-bar d-none gap-700">
+                    <!-- quiz status bar -->
+                    <div class="status-bar d-none py-5">
                         <div class="quiz-status rounded-4 bg-white d-flex shadow-lg mt-md-5 mt-sm-4 justify-content-start align-items-center"><span class="quiz-status__bar"></span></div>
                     </div>
                 </header>

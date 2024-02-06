@@ -25,6 +25,9 @@ $(document).ready(function() {
             $('#js-quiz').attr("id", "option-three");
             $('#accessibility-quiz').attr("id", "option-four");
 
+            
+
+
             //fetching json data
             $.getJSON('/data.json', function(data) {
                 // Create the first paragraph element with its class
@@ -54,7 +57,7 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('.question-header').fadeIn(800);
                 $('.status-bar').fadeIn(800);
-                $('.status-bar').removeAttr("class", "d-none");
+                $('.status-bar').removeClass("d-none");
             }, 2000);
 
             setTimeout(function() {
@@ -76,6 +79,8 @@ $(document).ready(function() {
             
 
         console.log("The HTML quiz button has been clicked.");
+
+
     });
 });
 });
