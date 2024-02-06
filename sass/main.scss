@@ -11,7 +11,7 @@ $blue-700: hsl(219 13% 44%);
 $blue-800: hsl(215 27% 32%);
 $blue-900: hsl(216 25% 25%);
 
-$orange: #fff2ea;
+$orange: #FFF1E9;
 $green: hsl(151, 100%, 95%);
 $blueish: hsl(235, 100%, 95%);
 $purple: hsl(277, 87%, 94%);
@@ -56,9 +56,11 @@ $purple: hsl(277, 87%, 94%);
   color: $blue-100;
 }
 
-.my-7 {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+@media (min-width: 992px) {
+  .my-7-lg {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+  }
 }
 
 .fw-semi-bold {
