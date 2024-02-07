@@ -21,7 +21,7 @@
 
         <div class="d-flex justify-content-between my-7-lg my-4 align-items-center">
 
-            <div id="current-sub" class="d-flex flex-row align-items-center">
+            <div id="current-sub" class="d-flex invisible flex-row align-items-center">
             <img src="./images/icon-accessibility.svg" id="current-sub-icon" class="p-2 rounded-3 bg-purple"/>
             <p id="current-sub-name" class="px-4 blue-900 ">Accessibility</p>
             </div>
@@ -67,7 +67,7 @@
                 </header>
         
                 <main class="col-12 col-md-6">
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column" id="quiz-btn-container">
                         <button id="html-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center">
                             <img src="./images/icon-html.svg" id="html-svg" class="svg p-2 rounded-3 bg-orange me-4"/>
                             HTML
@@ -84,6 +84,15 @@
                         <button id="submit" class="d-none bg-primary rounded-4 border border-default mb-3 py-3 fw-bold white shadow-lg btn-1 align-items-center justify-content-center">
                             Submit Answer
                          </button>
+
+                         <div class="bg-white d-flex blue-900 gap-2 score-card border border-default rounded-4 shadow-lg flex-column align-items-center justify-content-center">
+                            <div class="d-flex flex-row align-items-center gap-3">
+                                <img src="./images/icon-html.svg" class="svg p-2 rounded-3 bg-orange" id="score-card__img"/>
+                                <p class="heading-S" id="score-card__name">HTML</p>
+                            </div>
+                            <h1 class="fs-800" id="score-card__score">8</h1>
+                            <p>out of 10</p>
+                         </div>
                     </div>
                 </main>
             </div>
