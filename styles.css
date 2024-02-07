@@ -247,3 +247,17 @@ body {
   left: .3rem;
   z-index: 1;
 }
+
+
+.activated.quiz-button {
+  border: 3px solid hsl(var(--purple)) !important;
+}
+
+.activated.quiz-button.correct {
+  border: 3px solid hsl(var(--green)) !important;
+}
+
+.activated.quiz-button.incorrect {
+  border: 3px solid hsl(var(--red)) !important;
+}
+
