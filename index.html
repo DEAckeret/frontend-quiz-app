@@ -67,25 +67,28 @@
                 </header>
         
                 <main class="col-12 col-md-6">
+
+                    <!-- quiz buttons -->
                     <div class="d-flex flex-column" id="quiz-btn-container">
                         <button id="html-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center">
                             <img src="./images/icon-html.svg" id="html-svg" class="svg p-2 rounded-3 bg-orange me-4"/>
-                            HTML
+                            <span class="button-text">HTML</span>
                         </button>
-                        <button id="css-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center">
-                            <img src="./images/icon-css.svg" class="svg bg-green rounded-3 p-2 me-4"/> CSS
-                        </button>
-                        <button id="js-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center">
-                            <img src="./images/icon-js.svg" class="svg bg-blueish rounded-3 p-2 me-4"/> Javascript
-                        </button>
-                        <button id="accessibility-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center">
-                           <img src="./images/icon-accessibility.svg" class="svg bg-purple rounded-3 p-2 me-4" /> Accessibility
-                        </button>
-                        <button id="submit" class="d-none bg-primary rounded-4 border border-default mb-3 py-3 fw-bold white shadow-lg btn-1 align-items-center justify-content-center">
-                            Submit Answer
-                         </button>
 
-                         <div class="bg-white d-flex blue-900 gap-2 score-card border border-default rounded-4 shadow-lg flex-column align-items-center justify-content-center">
+                        <button id="css-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center">
+                            <img src="./images/icon-css.svg" class="svg bg-green rounded-3 p-2 me-4"/> <span class="button-text">CSS</span>
+                        </button>
+
+                        <button id="js-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center">
+                            <img src="./images/icon-js.svg" class="svg bg-blueish rounded-3 p-2 me-4"/> <span class="button-text">JavaScript</span>
+                        </button>
+
+                        <button id="accessibility-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center">
+                           <img src="./images/icon-accessibility.svg" class="svg bg-purple rounded-3 p-2 me-4" /> <span class="button-text">Accessibility</span>
+                        </button>
+
+                        <!-- score card -->
+                        <div class="bg-white d-none blue-900 gap-2 score-card border border-default rounded-4 shadow-lg flex-column align-items-center justify-content-center my-3 mt-5">
                             <div class="d-flex flex-row align-items-center gap-3">
                                 <img src="./images/icon-html.svg" class="svg p-2 rounded-3 bg-orange" id="score-card__img"/>
                                 <p class="heading-S" id="score-card__name">HTML</p>
@@ -93,6 +96,12 @@
                             <h1 class="fs-800" id="score-card__score">8</h1>
                             <p>out of 10</p>
                          </div>
+
+                         <!-- submit/next question/play again button -->
+                        <button id="submit" class="d-none bg-primary rounded-4 border border-default mb-3 py-3 fw-bold white shadow-lg btn-1 align-items-center justify-content-center">
+                            Submit Answer
+                         </button>
+
                     </div>
                 </main>
             </div>
