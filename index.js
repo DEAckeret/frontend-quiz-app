@@ -74,7 +74,7 @@ $(document).ready(function() {
 
 
             //fetching json data
-            $.getJSON('/data.json', function(data) {
+            $.getJSON('./data.json', function(data) {
                 // Create the first paragraph element with its class
                 var p1 = $("<p></p>").text("Question " + (questionNumber + 1) + " of 10").addClass("body-S blue-900"); 
             
@@ -185,7 +185,7 @@ $(document).ready(function() {
 
 
             //fetching json data
-            $.getJSON('/data.json', function(data) {
+            $.getJSON('./data.json', function(data) {
                 // Create the first paragraph element with its class
                 var p1 = $("<p></p>").text("Question " + (questionNumber + 1) + " of 10").addClass("body-S blue-900"); 
             
@@ -291,7 +291,7 @@ $(document).ready(function() {
 
 
             //fetching json data
-            $.getJSON('/data.json', function(data) {
+            $.getJSON('./data.json', function(data) {
                 // Create the first paragraph element with its class
                 var p1 = $("<p></p>").text("Question " + (questionNumber + 1) + " of 10").addClass("body-S blue-900"); 
             
@@ -397,7 +397,7 @@ $(document).ready(function() {
 
 
             //fetching json data
-            $.getJSON('/data.json', function(data) {
+            $.getJSON('./data.json', function(data) {
                 // Create the first paragraph element with its class
                 var p1 = $("<p></p>").text("Question " + (questionNumber + 1) + " of 10").addClass("body-S blue-900"); 
             
@@ -490,7 +490,7 @@ $(document).ready(function() {
 
         subAnswer = $this.find('.button-text').text();
 
-        $.getJSON('/data.json', function(data) {
+        $.getJSON('./data.json', function(data) {
             if (subAnswer === data.quizzes[masterVariable].questions[questionNumber].answer) {
                 console.log("Yes, the answer is " + data.quizzes[masterVariable].questions[questionNumber].answer);
                 correctAnswers++;
@@ -531,7 +531,7 @@ $(document).ready(function() {
             questionNumber++;
             console.log("The question number is now " + questionNumber);
 
-            $.getJSON('/data.json', function(data) {
+            $.getJSON('./data.json', function(data) {
                 var p1 = $("<p></p>").text("Question " + (questionNumber + 1) + " of 10").addClass("body-S blue-900"); 
                 var p2 = $("<p></p>").text(data.quizzes[masterVariable].questions[questionNumber].question).addClass("heading-S blue-900 gap-700"); 
 
