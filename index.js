@@ -47,6 +47,21 @@ $(document).ready(function() {
 
             $('quiz-button').removeClass('d-flex');
 
+            $('#html-svg').addClass("d-none");
+            $('#css-svg').addClass("d-none");
+            $('#js-svg').addClass("d-none");
+            $('#accessibility-svg').addClass("d-none");
+
+            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+
+            $('#html-quiz').prepend(optA);
+            $('#css-quiz').prepend(optB);
+            $('#js-quiz').prepend(optC);
+            $('#accessibility-quiz').prepend(optD);
+
             masterVariable = 0;
             console.log("The master variable is now " + masterVariable + " and will initiate the HTML quiz.");
             questionNumber = 0;
@@ -158,6 +173,22 @@ $(document).ready(function() {
         $('.quiz-button').fadeOut(600, function() {
             $('.question-header').fadeOut(600);
 
+
+            $('#html-svg').addClass("d-none");
+            $('#css-svg').addClass("d-none");
+            $('#js-svg').addClass("d-none");
+            $('#accessibility-svg').addClass("d-none");
+
+            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+
+            $('#html-quiz').prepend(optA);
+            $('#css-quiz').prepend(optB);
+            $('#js-quiz').prepend(optC);
+            $('#accessibility-quiz').prepend(optD);
+
             masterVariable = 1;
             console.log("The master variable is now " + masterVariable + " and will initiate the CSS quiz.");
             questionNumber = 0;
@@ -263,6 +294,22 @@ $(document).ready(function() {
     $(document).on('click', '#js-quiz', function() {
         $('.quiz-button').fadeOut(600, function() {
             $('.question-header').fadeOut(600);
+
+
+            $('#html-svg').addClass("d-none");
+            $('#css-svg').addClass("d-none");
+            $('#js-svg').addClass("d-none");
+            $('#accessibility-svg').addClass("d-none");
+
+            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+
+            $('#html-quiz').prepend(optA);
+            $('#css-quiz').prepend(optB);
+            $('#js-quiz').prepend(optC);
+            $('#accessibility-quiz').prepend(optD);
 
             masterVariable = 2;
             console.log("The master variable is now " + masterVariable + " and will initiate the JS quiz.");
@@ -370,6 +417,22 @@ $(document).ready(function() {
     $(document).on('click', '#accessibility-quiz', function() {
         $('.quiz-button').fadeOut(600, function() {
             $('.question-header').fadeOut(600);
+
+
+            $('#html-svg').addClass("d-none");
+            $('#css-svg').addClass("d-none");
+            $('#js-svg').addClass("d-none");
+            $('#accessibility-svg').addClass("d-none");
+
+            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+
+            $('#html-quiz').prepend(optA);
+            $('#css-quiz').prepend(optB);
+            $('#js-quiz').prepend(optC);
+            $('#accessibility-quiz').prepend(optD);
 
             masterVariable = 3;
             console.log("The master variable is now " + masterVariable + " and will initiate the Accessibility quiz.");
@@ -479,6 +542,8 @@ $(document).ready(function() {
     $(document).on('click', '.quiz-button', function() {
         console.log("The quiz button has been clicked.");
     
+        $('.error-container-quiz').remove();
+
         // Store the $(this) reference
         $this = $(this);
         
@@ -488,34 +553,54 @@ $(document).ready(function() {
 
     $(document).on('click', '#submit', function() {
 
-        subAnswer = $this.find('.button-text').text();
+        if (!$('.quiz-button').hasClass('activated')) {
+            // No .quiz-button has the active class
+            console.log("No answer has been selected.");
 
-        $.getJSON('./data.json', function(data) {
-            if (subAnswer === data.quizzes[masterVariable].questions[questionNumber].answer) {
-                console.log("Yes, the answer is " + data.quizzes[masterVariable].questions[questionNumber].answer);
-                correctAnswers++;
-                console.log("The number of correct answers is " + correctAnswers);
+            $('.error-container-quiz').remove();
+            
+            var errorContainer = $('<div></div>').addClass('error-container-quiz').css('display', 'flex');
+            var errorIcon = $('<img src="./images/icon-error.svg"/>');
+            var errorMessage = $("<p></p>").text("Please select an answer").addClass("error-message-quiz").css('color', 'red');
 
-                $this.append('<img src="./images/icon-correct.svg" class="svg-icon correction-marker" />');
+            $('.quiz-btn-container').append(errorContainer);
+            errorContainer.append(errorIcon, errorMessage);
+            
+            
+        } else {
 
-                $('#submit').text("Next Question");
-                $('#submit').attr("id", "next-question");
-                $this.addClass('correct');
 
-            } else {
-                console.log("The answer is incorrect.");
-                $this.addClass('incorrect');
-                $this.append('<img src="./images/icon-incorrect.svg" class="svg-icon correction-marker"/>');
-                $('#submit').text("Next Question");
-                $('#submit').attr("id", "next-question");
+            subAnswer = $this.find('.button-text').text();
 
-                var $correctButton = $('.quiz-button:contains(' + currentAnswer + ')');
+            $.getJSON('./data.json', function(data) {
+                if (subAnswer === data.quizzes[masterVariable].questions[questionNumber].answer) {
+                    console.log("Yes, the answer is " + data.quizzes[masterVariable].questions[questionNumber].answer);
+                    correctAnswers++;
+                    console.log("The number of correct answers is " + correctAnswers);
 
-                $correctButton.append('<img src="./images/icon-correct.svg" class="svg-icon correction-marker" />');
-            }
+                    $this.append('<img src="./images/icon-correct.svg" class="svg-icon correction-marker" />');
+
+                    $('#submit').text("Next Question");
+                    $('#submit').attr("id", "next-question");
+                    $this.addClass('correct');
+
+                } else {
+                    console.log("The answer is incorrect.");
+                    $this.addClass('incorrect');
+                    $this.append('<img src="./images/icon-incorrect.svg" class="svg-icon correction-marker"/>');
+                    $('#submit').text("Next Question");
+                    $('#submit').attr("id", "next-question");
+
+                    var $correctButton = $('.quiz-button:contains(' + currentAnswer + ')');
+
+                    $correctButton.append('<img src="./images/icon-correct.svg" class="svg-icon correction-marker" />');
+                }
+
         });
+    }
     });
 });
+
 
 
 
@@ -634,21 +719,34 @@ $(document).ready(function() {
         $('#option-three').text("");
         $('#option-four').text("");
 
+        $('.quiz-button').removeClass('activated');
+            $('#option-one').removeClass('correct');
+            $('#option-two').removeClass('correct');
+            $('#option-three').removeClass('correct');
+            $('#option-four').removeClass('correct');
+
+            $('#option-one').removeClass('incorrect');
+            $('#option-two').removeClass('incorrect');
+            $('#option-three').removeClass('incorrect');
+            $('#option-four').removeClass('incorrect');
+
+        $('.alpha-icon').remove();
+
         $('#option-one').attr("id", "html-quiz");
         $('#option-two').attr("id", "css-quiz");
         $('#option-three').attr("id", "js-quiz");
         $('#option-four').attr("id", "accessibility-quiz");
 
-        htmlImg = $('<img src="./images/icon-html.svg" class="p-2 rounded-3 bg-orange me-4" />');
+        htmlImg = $('<img src="./images/icon-html.svg" class="p-2 rounded-3 bg-orange me-4" id="html-svg" />');
         hspan = $('<span></span>').text('HTML').addClass('button-text');
 
-        cssImg = $('<img src="./images/icon-css.svg" class="p-2 rounded-3 bg-green me-4" />');
+        cssImg = $('<img src="./images/icon-css.svg" class="p-2 rounded-3 bg-green me-4" id="css-svg"/>');
         cspan = $('<span></span>').text('CSS').addClass('button-text');
 
-        jsImg = $('<img src="./images/icon-js.svg" class="p-2 rounded-3 bg-blueish me-4" />');
+        jsImg = $('<img src="./images/icon-js.svg" class="p-2 rounded-3 bg-blueish me-4" id="js-svg"/>');
         jspan = $('<span></span>').text('JavaScript').addClass('button-text');
 
-        accessibilityImg = $('<img src="./images/icon-accessibility.svg" class="p-2 rounded-3 bg-purple me-4" />');
+        accessibilityImg = $('<img src="./images/icon-accessibility.svg" class="p-2 rounded-3 bg-purple me-4" id="accessibility-svg"/>');
         aspan = $('<span></span>').text('Accessibility').addClass('button-text');
 
         $('#html-quiz').append(htmlImg, hspan);
