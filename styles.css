@@ -131,8 +131,25 @@ body {
       background-image: url('./images/pattern-background-desktop-light.svg');
       background-repeat: no-repeat;
       background-size: cover;
-  
 }
+
+@media (max-width: 1439px) {
+  body {
+      background-image: url('./images/pattern-background-tablet-light.svg');
+      background-repeat: no-repeat;
+      background-size: auto;
+  }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-image: url('./images/pattern-background-mobile-light.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
 
 
 .fs-300 {

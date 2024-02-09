@@ -687,3 +687,8 @@ $(document).ready(function() {
     });
 });
 
+
+// END OF QUIZ FUNCTIONS
+
+
+
