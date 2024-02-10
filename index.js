@@ -91,10 +91,10 @@ $(document).ready(function() {
             //fetching json data
             $.getJSON('./data.json', function(data) {
                 // Create the first paragraph element with its class
-                var p1 = $("<p></p>").text("Question " + (questionNumber + 1) + " of 10").addClass("body-S blue-900"); 
+                var p1 = $("<p></p>").text("Question " + (questionNumber + 1) + " of 10").addClass("body-S grey-navy pt-4"); 
             
                 // Create the second paragraph element with its class
-                var p2 = $("<p></p>").text(data.quizzes[masterVariable].questions[questionNumber].question).addClass("heading-S blue-900 gap-700"); 
+                var p2 = $("<p></p>").text(data.quizzes[masterVariable].questions[questionNumber].question).addClass("heading-S blue-900 gap-600"); 
 
                 // Shuffle the indices and reassign them to the variables thus shuffling the options. 
                 indices = shuffleArray(indices);
@@ -559,11 +559,11 @@ $(document).ready(function() {
 
             $('.error-container-quiz').remove();
             
-            var errorContainer = $('<div></div>').addClass('error-container-quiz').css('display', 'flex');
-            var errorIcon = $('<img src="./images/icon-error.svg"/>');
+            var errorContainer = $('<div></div>').addClass('error-container-quiz d-flex align-items-center justify-content-center');
+            var errorIcon = $('<img src="./images/icon-error.svg"/>').addClass('px-2');
             var errorMessage = $("<p></p>").text("Please select an answer").addClass("error-message-quiz").css('color', 'red');
 
-            $('.quiz-btn-container').append(errorContainer);
+            $('#quiz-btn-container').append(errorContainer);
             errorContainer.append(errorIcon, errorMessage);
             
             
@@ -775,7 +775,7 @@ $(document).ready(function() {
 
         var hlr = $("<h1></h1>").text("Welcome to the").addClass("heading-L-regular blue-900");
         var hlb = $("<h1></h1>").text("Frontend Quiz!").addClass("heading-L-bold blue-900");
-        var p = $("<p></p>").text("Pick a subject to get started").addClass("body-S blue-700 gap-600");
+        var p = $("<p></p>").text("Pick a subject to get started").addClass("body-S blue-700 pt-3 pt-lg-5 pb-4");
 
         $('.question-header').empty().append(hlr, hlb, p);
 

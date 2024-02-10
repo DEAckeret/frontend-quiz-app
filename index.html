@@ -49,15 +49,15 @@
 
         </div>
 
-        <div class="main-content">
-            <div class="row">
-                <header class="col-12 col-lg-6">
+        <div class="main-content pt-lg-5">
+            <div class="row row-container">
+                <header class="col-12 col-lg-5">
 
                     <!-- questions -->
                     <div class="question-header">
                         <h1 class="heading-L-regular blue-900">Welcome to the</h1>
                         <h1 class="heading-L-bold blue-900">Frontend Quiz!</h1>
-                        <p class="body-S blue-700 gap-600">Pick a subject to get started</p>
+                        <p class="body-S blue-700 pt-3 pt-lg-5 pb-4">Pick a subject to get started</p>
                     </div>
 
                     <!-- quiz status bar -->
@@ -69,26 +69,26 @@
                 <main class="col-12 col-lg-6">
 
                     <!-- quiz buttons -->
-                    <div class="d-flex flex-column" id="quiz-btn-container">
-                        <button id="html-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center position-relative">
+                    <div class="d-flex flex-column gap-500" id="quiz-btn-container">
+                        <button id="html-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 mb-md-4 mb-lg-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center position-relative">
                             <img src="./images/icon-html.svg" id="html-svg" class="svg p-2 rounded-3 bg-orange me-4"/>
                             <span class="button-text blue-900">HTML</span>
                         </button>
 
-                        <button id="css-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center position-relative">
+                        <button id="css-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 mb-md-4 mb-lg-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center position-relative">
                             <img src="./images/icon-css.svg" class="svg bg-green rounded-3 p-2 me-4" id="css-svg"/> <span class="button-text blue-900">CSS</span>
                         </button>
 
-                        <button id="js-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center position-relative">
+                        <button id="js-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 mb-md-4 mb-lg-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center position-relative">
                             <img src="./images/icon-js.svg" class="svg bg-blueish rounded-3 p-2 me-4" id="js-svg"/> <span class="button-text blue-900">JavaScript</span>
                         </button>
 
-                        <button id="accessibility-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center position-relative">
+                        <button id="accessibility-quiz" class="quiz-button bg-white rounded-4 border border-default mb-3 mb-md-4 mb-lg-3 py-3 fw-bold blue-900 shadow-lg btn-1 align-items-center position-relative">
                            <img src="./images/icon-accessibility.svg" class="svg bg-purple rounded-3 p-2 me-4" id="accessibility-svg" /> <span class="button-text blue-900">Accessibility</span>
                         </button>
 
                         <!-- score card -->
-                        <div class="bg-white d-none blue-900 gap-2 score-card border border-default rounded-4 shadow-lg flex-column align-items-center justify-content-center my-3 mt-5">
+                        <div class="bg-white d-none blue-900 gap-2 score-card border border-default rounded-4 shadow-lg flex-column align-items-center justify-content-center my-3 mt-5 mt-md-4">
                             <div class="d-flex flex-row align-items-center gap-3">
                                 <img src="./images/icon-html.svg" class="svg p-2 rounded-3 bg-orange" id="score-card__img"/>
                                 <p class="heading-S" id="score-card__name">HTML</p>
@@ -98,7 +98,7 @@
                          </div>
 
                          <!-- submit/next question/play again button -->
-                        <button id="submit" class="d-none bg-primary rounded-4 border border-default mb-3 py-3 fw-bold white shadow-lg btn-1 align-items-center justify-content-center">
+                        <button id="submit" class="d-none bg-primary rounded-4 border border-default mt-2 mb-3 py-3 fw-bold white shadow-lg btn-1 align-items-center justify-content-center">
                             Submit Answer
                          </button>
 
