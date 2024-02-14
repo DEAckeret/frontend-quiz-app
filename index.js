@@ -52,10 +52,10 @@ $(document).ready(function() {
             $('#js-svg').addClass("d-none");
             $('#accessibility-svg').addClass("d-none");
 
-            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
 
             $('#html-quiz').prepend(optA);
             $('#css-quiz').prepend(optB);
@@ -179,10 +179,10 @@ $(document).ready(function() {
             $('#js-svg').addClass("d-none");
             $('#accessibility-svg').addClass("d-none");
 
-            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
 
             $('#html-quiz').prepend(optA);
             $('#css-quiz').prepend(optB);
@@ -301,10 +301,10 @@ $(document).ready(function() {
             $('#js-svg').addClass("d-none");
             $('#accessibility-svg').addClass("d-none");
 
-            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
 
             $('#html-quiz').prepend(optA);
             $('#css-quiz').prepend(optB);
@@ -424,10 +424,10 @@ $(document).ready(function() {
             $('#js-svg').addClass("d-none");
             $('#accessibility-svg').addClass("d-none");
 
-            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
-            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey blue-900 me-4 alpha-icon");
+            optA = $('<span></span>').text('A').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optB = $('<span></span>').text('B').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optC = $('<span></span>').text('C').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
+            optD = $('<span></span>').text('D').addClass("svg p-3 px-4 rounded-3 bg-light-grey me-4 alpha-icon");
 
             $('#html-quiz').prepend(optA);
             $('#css-quiz').prepend(optB);
@@ -790,3 +790,61 @@ $(document).ready(function() {
 
 
 
+// TOGGLE LIGHT/DARK MODE
+
+$(document).ready(function() {
+    $(document).on('click', '#toggle-mode', function() {
+        if ($('html').attr('data-bs-theme') === 'dark') {
+            $('html').attr('data-bs-theme', 'light');
+            $('body').removeClass('dark-mode bg-navy').addClass('bg-light-grey');
+            $('.white').addClass('blue-900').removeClass('white');
+            $('.light-grey').addClass('blue-700').removeClass('light-grey');
+            $('.quiz-button').removeClass('bg-navy').addClass('bg-white');
+            $('#svg-toggle-night').addClass('d-none');
+            $('#svg-toggle-day').removeClass('d-none');
+            $('#moon-path').attr('fill', '#626C7F');
+            $('#sun-path').attr('fill', '#626C7F');
+        } else {
+            $('html').attr('data-bs-theme', 'dark');
+            $('body').removeClass('bg-light-grey').addClass('dark-mode bg-navy');
+            $('.blue-900').addClass('white').removeClass('blue-900');
+            $('.blue-700').addClass('light-grey').removeClass('blue-700');
+            $('.quiz-button').removeClass('bg-white').addClass('bg-navy');
+            $('#svg-toggle-day').addClass('d-none');
+            $('#svg-toggle-night').removeClass('d-none');
+            $('#sun-path').attr('fill', '#ffffff');
+            $('#moon-path').attr('fill', '#ffffff');
+        }
+    });
+});
+
+
+
+
+
+
+// Experimenting with MutationOberserver
+
+// $(document).ready(function() {
+
+
+// const targetNode = document.getElementById('header');
+
+// const config = { attributes: true, childList: true, subtree: true };
+
+// const callback = function(mutationsList, observer) {
+//     for(const mutation of mutationsList) {
+//         if (mutation.type === 'childList') {
+//             console.log('A child node has been added or removed.');
+//         } else if (mutation.type === 'attributes') {
+//             console.log('The ' + mutation.attributeName + ' attribute was modified.');
+//         }
+//     }
+// }
+
+// const observer = new MutationObserver(callback);
+
+// observer.observe(targetNode, config);
+
+
+// });
