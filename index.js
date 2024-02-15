@@ -825,26 +825,41 @@ $(document).ready(function() {
 
 // Experimenting with MutationOberserver
 
-// $(document).ready(function() {
+$(document).ready(function() {
+    const targetNode = $('.question-header');
+
+    const observer = new MutationObserver(function() {
+        const secondChild = targetNode.children().eq(1);
+        const theme = document.documentElement.getAttribute('data-bs-theme');
+        if (theme === 'dark') {
+            // Apply dark theme styles
+            secondChild.removeClass('blue-900').addClass('white');
+        } else {
+            // Apply light theme styles
+            secondChild.removeClass('white').addClass('blue-900');
+        }
+    });
+
+    observer.observe(targetNode[0], { childList: true });
+});
 
 
-// const targetNode = document.getElementById('header');
+// END OF QUIZ OBSERVER - this is part of the learning process, not super efficient but needed something to apply utility class to end of quiz message.
 
-// const config = { attributes: true, childList: true, subtree: true };
+$(document).ready(function() {
+    const targetNode = $('.question-header');
 
-// const callback = function(mutationsList, observer) {
-//     for(const mutation of mutationsList) {
-//         if (mutation.type === 'childList') {
-//             console.log('A child node has been added or removed.');
-//         } else if (mutation.type === 'attributes') {
-//             console.log('The ' + mutation.attributeName + ' attribute was modified.');
-//         }
-//     }
-// }
+    const observer = new MutationObserver(function() {
+        const firstChild = targetNode.children().filter('.heading-L-regular').eq(0);
+        const theme = document.documentElement.getAttribute('data-bs-theme');
+        if (theme === 'dark') {
+            // Apply dark theme styles
+            firstChild.removeClass('blue-900').addClass('white');
+        } else {
+            // Apply light theme styles
+            firstChild.removeClass('white').addClass('blue-900');
+        }
+    });
 
-// const observer = new MutationObserver(callback);
-
-// observer.observe(targetNode, config);
-
-
-// });
+    observer.observe(targetNode[0], { childList: true });
+});
